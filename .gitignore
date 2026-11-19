@@ -1,0 +1,17 @@
+# Dependencies & Packages
+node_modules/
+package-lock.json
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & Local Secrets
+.env
+.env.local
+*.log
+
+# Editor / IDE Directories
+.vscode/
+.idea/

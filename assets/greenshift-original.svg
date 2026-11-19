@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW (OEM Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2.32462in" height="2.32462in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 278.94 278.94"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <path d="M139.47 0c77.03,0 139.47,62.44 139.47,139.47 0,77.03 -62.44,139.47 -139.47,139.47 -77.03,0 -139.47,-62.44 -139.47,-139.47 0,-77.03 62.44,-139.47 139.47,-139.47z"/>
+   </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g>
+  </g>
+  <g style="clip-path:url(#id0)">
+   <g id="_3170984088400">
+    <image x="-121.55" y="-27.66" width="518.22" height="328.32" xlink:href="greenshift_Images\greenshift_ImgID1.png"/>
+   </g>
+  </g>
+  <path class="fil0" d="M139.47 0c77.03,0 139.47,62.44 139.47,139.47 0,77.03 -62.44,139.47 -139.47,139.47 -77.03,0 -139.47,-62.44 -139.47,-139.47 0,-77.03 62.44,-139.47 139.47,-139.47z"/>
+ </g>
+</svg>

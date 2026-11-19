@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore indicative wastewater treatment capacity and site planning factors with the Greenshift Bio Digester sizing guide.">
+  <title>System Sizing Calculator | Greenshift Bio Digester</title>
+  
+    <link rel="icon" type="image/webp" href="assets/favicon.webp?v=20261113f">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=20261113f">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png?v=20261113f">
+  <link rel="apple-touch-icon" href="assets/favicon.png?v=20261113f">
+  <link rel="stylesheet" href="css/style.css?v=20261113e">
+  <style>
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      .calculator-box, .calculator-box * {
+        visibility: visible;
+      }
+      .calculator-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+      }
+      .top-bar, .site-header, .site-footer, .btn, .nav-actions, .mobile-toggle {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Authority Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Sizing estimate</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a href="contact.html#booking-form">Request an assessment</a>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a href="contact.html#booking-form">Use the project inquiry form</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Greenshift Bio Digester Home">
+        <div class="logo-icon-wrapper">
+          <img src="assets/greenshift-logo.webp" alt="Greenshift Bio Digester Logo" class="brand-logo-img" width="44" height="44">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">GREENSHIFT</span>
+          <span class="brand-subtitle">BIO DIGESTER</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="solutions.html" class="nav-link ">Solutions</a></li>
+          <li><a href="technology.html" class="nav-link ">How it works</a></li>
+          <li><a href="calculator.html" class="nav-link active">Sizing guide</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+          <li class="mobile-menu-cta"><a href="contact.html#booking-form" class="btn btn-primary">Request a site assessment</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Request Site Survey</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section section-dark" style="padding: 4rem 0 4.5rem 0;">
+    <div class="container">
+      <div style="max-width: 800px;">
+        <div class="badge-tag" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.25); color:#a7f3d0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+          </svg>
+          <span>SIZING &amp; COST ESTIMATOR</span>
+        </div>
+        <h1 style="color:#ffffff; margin-bottom:1.25rem;">Explore a system size</h1>
+        <p style="font-size:1.15rem; color:#cbd5e1; line-height:1.7;">
+          Choose an occupancy range, property type and ground condition to explore an indicative system size and cost. Confirm the design and price with a site assessment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Tool -->
+  <section class="section" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="calculator-box">
+        <div class="calculator-grid">
+          <!-- Left Controls -->
+          <div class="calculator-controls">
+            <h3 style="font-size:1.35rem; margin-bottom:1.5rem; color:var(--color-slate-900);">System Sizing Inputs</h3>
+
+            <div class="form-group">
+              <label class="form-label" for="calc-users">
+                <span>Daily Occupant / User Capacity</span>
+                <span class="form-label-value" id="calc-users-val">25 Occupants</span>
+              </label>
+              <input type="range" class="range-slider" id="calc-users" min="5" max="350" step="5" value="25">
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#94a3b8; margin-top:0.4rem;">
+                <span>5 Users (Villa)</span>
+                <span>75 Users (Apartments)</span>
+                <span>350+ Users (Campuses)</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calc-property">
+                <span>Property / Facility Type</span>
+              </label>
+              <select class="form-select" id="calc-property">
+                <option value="residential-single">Single Family Home / Villa (Normal Peak)</option>
+                <option value="residential-multi" selected>Multi-Tenant Apartment Complex (Elevated Peak)</option>
+                <option value="commercial-office">Commercial Office Building (Daytime Usage)</option>
+                <option value="school-institution">School / University Campus (High Blackwater Load)</option>
+                <option value="hospitality-hotel">Hotel, Resort or Safari Lodge (Heavy Laundry & Kitchen)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>Site Soil & Hydrological Profile</span>
+              </label>
+              <div class="radio-pill-group">
+                <div class="radio-pill">
+                  <input type="radio" id="soil-normal" name="calc-soil" value="normal" checked>
+                  <label for="soil-normal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span>Red Soil / Loam</span>
+                  </label>
+                </div>
+                <div class="radio-pill">
+                  <input type="radio" id="soil-clay" name="calc-soil" value="clay">
+                  <label for="soil-clay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="4" y1="21" x2="4" y2="14"></line>
+                      <line x1="4" y1="10" x2="4" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12" y2="3"></line>
+                      <line x1="20" y1="21" x2="20" y2="16"></line>
+                      <line x1="20" y1="12" x2="20" y2="3"></line>
+                    </svg>
+                    <span>Black Cotton</span>
+                  </label>
+                </div>
+                <div class="radio-pill">
+                  <input type="radio" id="soil-highwater" name="calc-soil" value="highwater">
+                  <label for="soil-highwater">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                    </svg>
+                    <span>High Water Table</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" style="margin-bottom:0.75rem;">
+                <span>System Add-On Options</span>
+              </label>
+              <div style="display:flex; flex-direction:column; gap:0.6rem;">
+                <label style="display:flex; align-items:center; gap:0.6rem; font-size:0.88rem; cursor:pointer;">
+                  <input type="checkbox" id="calc-biogas" style="width:16px; height:16px; accent-color:var(--color-accent);">
+                  <span>Integrate Biogas Methane Recovery & Cooking Line</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.6rem; font-size:0.88rem; cursor:pointer;">
+                  <input type="checkbox" id="calc-greywater" style="width:16px; height:16px; accent-color:var(--color-accent);">
+                  <span>Integrate Polished Effluent Irrigation Pump Kit</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Results Panel -->
+          <div class="calculator-results">
+            <div>
+              <div class="calc-result-header">
+                <div class="calc-result-subtitle">RECOMMENDED SPECIFICATION</div>
+                <div class="calc-model-name" id="out-model-name">GL-35 Deluxe Residential</div>
+              </div>
+
+              <div class="calc-specs-list">
+                <div class="calc-spec-item">
+                  <div class="calc-spec-label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                    </svg>
+                    <span>Daily Inflow Volume</span>
+                  </div>
+                  <div class="calc-spec-value" id="out-daily-flow">1,875 L / Day</div>
+                </div>
+
+                <div class="calc-spec-item">
+                  <div class="calc-spec-label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    </svg>
+                    <span>Tank Physical Dimensions</span>
+                  </div>
+                  <div class="calc-spec-value" id="out-dimensions">2.8m (L) x 1.5m (W) x 1.8m (D)</div>
+                </div>
+
+                <div class="calc-spec-item">
+                  <div class="calc-spec-label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    </svg>
+                    <span>Surface Land Footprint</span>
+                  </div>
+                  <div class="calc-spec-value" id="out-footprint">4.2 m²</div>
+                </div>
+
+              </div>
+
+              <div class="calc-pricing-box">
+                <div class="calc-price-row">
+                  <span class="calc-price-label">Indicative estimate (USD):</span>
+                  <span class="calc-price-value" id="out-cost-estimate">$1,850</span>
+                </div>
+                <div class="calc-price-note">Illustrative USD figure, not a quotation. Local construction costs, soil and discharge requirements affect the final price.</div>
+              </div>
+
+            </div>
+
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <button class="btn btn-primary" onclick="window.print()" style="flex:1;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Print Specification Sheet</span>
+              </button>
+              <a href="contact.html" class="btn btn-outline-white" style="flex:1;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                <span>Book Site Survey</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt cost-factors">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">COST PLANNING</div>
+        <h2>What shapes the project cost?</h2>
+        <p>A reliable estimate needs current local prices and a site assessment. These are the main items to include in a quote.</p>
+      </div>
+      <div class="effluent-factors">
+        <article><span>01</span><h3>System capacity</h3><p>Occupancy and daily water use set the treatment capacity.</p></article>
+        <article><span>02</span><h3>Ground conditions</h3><p>Soil, groundwater, rock and access affect excavation and installation.</p></article>
+        <article><span>03</span><h3>Final treatment stage</h3><p>Dispersal or polishing requirements vary by site and local rules.</p></article>
+      </div>
+      <p class="calculator-disclaimer">Capacity, dimensions and USD prices shown are illustrative planning examples, not engineered recommendations or a quotation. Confirm assumptions, currency, local requirements and actual costs with a qualified local designer.</p>
+    </div>
+  </section>
+  <!-- Corporate Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom:1.25rem;">
+            <div class="logo-icon-wrapper">
+              <img src="assets/greenshift-logo.webp" alt="Greenshift Bio Digester Logo" class="brand-logo-img" width="44" height="44">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color:#ffffff;">GREENSHIFT</span>
+              <span class="brand-subtitle">BIO DIGESTER</span>
+            </div>
+          </div>
+          <p style="font-size:0.88rem; line-height:1.65; color:#94a3b8;">
+            Biological wastewater treatment sizing for homes, institutions and commercial sites.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Bio-Digester Systems</h4>
+          <ul class="footer-links-list">
+            <li><a href="solutions.html#residential">Residential Bio-Digesters</a></li>
+            <li><a href="solutions.html#commercial">Commercial Apartments</a></li>
+            <li><a href="solutions.html#biogas">Biogas Recovery Systems</a></li>
+            <li><a href="calculator.html">Sizing Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Engineering & Science</h4>
+          <ul class="footer-links-list">
+            <li><a href="technology.html">Anaerobic Microbiology</a></li>
+            <li><a href="technology.html#effluent">Effluent &amp; site conditions</a></li>
+            <li><a href="index.html#comparison">Septic Comparison</a></li>
+            <li><a href="index.html#soil-engineering">Geotechnical Profiles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Engineering Hotline</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Request an assessment via the inquiry form</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Use the project inquiry form</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Greenshift Bio Digester Limited. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js?v=20261108"></script>
+</body>
+</html>
