@@ -400,6 +400,94 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+
+  // ==========================================
+  // 9. Scroll Progress Indicator & Header Glass
+  // ==========================================
+  let progressBar = document.getElementById('scroll-progress-bar');
+  if (!progressBar) {
+    progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress-bar';
+    progressBar.className = 'scroll-progress-bar';
+    document.body.appendChild(progressBar);
+  }
+
+  function handleScroll() {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+    if (progressBar) {
+      progressBar.style.width = scrolled + '%';
+    }
+
+    if (header) {
+      if (winScroll > 30) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  // ==========================================
+  // 10. Scroll-Driven Reveal Animations (IntersectionObserver)
+  // ==========================================
+  const revealElements = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+  
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          animateCountersInside(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.12
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('revealed'));
+  }
+
+  // ==========================================
+  // 11. Animated Stat Counters
+  // ==========================================
+  function animateCountersInside(parent) {
+    const counterEls = parent.querySelectorAll ? parent.querySelectorAll('[data-counter]') : [];
+    counterEls.forEach(el => {
+      if (el.dataset.counterDone) return;
+      el.dataset.counterDone = 'true';
+      const target = parseFloat(el.getAttribute('data-counter'));
+      const prefix = el.getAttribute('data-prefix') || '';
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1200;
+      const start = 0;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - (1 - progress) * (1 - progress);
+        const currentVal = Math.floor(start + (target - start) * easeOut);
+        el.textContent = `${prefix}${currentVal}${suffix}`;
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = `${prefix}${target}${suffix}`;
+        }
+      }
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
   window.GreenshiftUI = {
     showToast: showToast
   };

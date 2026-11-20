@@ -100,7 +100,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-grid">
-      <div class="hero-content">
+      <div class="hero-content reveal-left">
         <p class="hero-eyebrow">Wastewater treatment for homes and sites</p>
 
         <h1 class="hero-title">
@@ -136,22 +136,22 @@
         </div>
 
         <div class="hero-stats-row">
-          <div class="hero-stat-item">
-            <h3>3 stages</h3>
+          <div class="hero-stat-item reveal-up">
+            <h3 data-counter="3" data-suffix=" stages">3 stages</h3>
             <p>Settling, digestion &amp; filtering</p>
           </div>
-          <div class="hero-stat-item">
+          <div class="hero-stat-item reveal-up delay-1">
             <h3>Gravity</h3>
             <p>Flow through the treatment chambers</p>
           </div>
-          <div class="hero-stat-item">
+          <div class="hero-stat-item reveal-up delay-2">
             <h3>Site-led</h3>
             <p>Sizing starts with people, soil &amp; water</p>
           </div>
         </div>
       </div>
 
-      <div class="hero-visual-card">
+      <div class="hero-visual-card reveal-right">
         <img class="hero-tank-image" src="assets/greenshift-three-chamber-tank.webp?v=20261113" alt="Cutaway illustration of Greenshift three-chamber biological wastewater treatment tank with inlet and outlet pipes." width="4804" height="3198" fetchpriority="high">
       </div>
     </div>
@@ -194,19 +194,22 @@
 
   <section class="section comparison-overview" id="comparison">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">SYSTEM OVERVIEW</div>
         <h2>How biological treatment differs</h2>
         <p>Both approaches need the right capacity and final wastewater route. The main difference is how treatment takes place.</p>
       </div>
       <div class="comparison-cards">
-        <article class="comparison-overview-card comparison-conventional">
+        <article class="comparison-overview-card comparison-conventional reveal-left">
           <span class="comparison-kicker">CONVENTIONAL SEPTIC</span>
           <h3>Settlement and storage</h3>
           <p>Solids settle in a tank while liquid moves to a soakaway or another locally approved discharge point. Inspection and desludging are part of ongoing care.</p>
           <ul><li>Simple tank-based separation</li><li>Requires a suitable outlet area</li><li>Service intervals vary with use</li></ul>
         </article>
-        <article class="comparison-overview-card comparison-biological">
+        <article class="comparison-overview-card comparison-biological reveal-right">
+          <div class="comparison-card-media">
+            <img src="assets/pristine-lawn-irrigation.webp" alt="Pristine green landscaped estate lawn with eco-friendly irrigation" loading="lazy" width="1000" height="667">
+          </div>
           <span class="comparison-kicker">BIOLOGICAL TREATMENT</span>
           <h3>Staged biological breakdown</h3>
           <p>Microorganisms help break down organic matter in the treatment chambers. The system still needs suitable sizing, inspection and a site-appropriate discharge design.</p>
@@ -219,7 +222,7 @@
   <!-- Interactive System Sizing & Cost Estimator Tool -->
   <section class="section section-alt" id="calculator-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="4" y="2" width="16" height="20" rx="2"></rect>
@@ -400,7 +403,7 @@
   <!-- The 4-Stage Biological Digestion Workflow -->
   <section class="section" id="how-it-works">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="23 4 23 10 17 10"></polyline>
@@ -414,7 +417,7 @@
       </div>
 
       <div class="process-grid">
-        <div class="process-card">
+        <div class="process-card reveal-up delay-1">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -435,7 +438,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-2">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -457,7 +460,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-3">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -479,7 +482,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-4">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -499,13 +502,37 @@
           </div>
         </div>
       </div>
+
+      <div class="process-visual-feature reveal-up">
+        <div>
+          <div class="badge-tag">REFINED EFFLUENT REUSE</div>
+          <h3 style="font-size:1.6rem; margin-bottom:1rem; color:var(--color-navy);">Natural Biological Digestion &amp; Safe Ground Infiltration</h3>
+          <p style="color:#475569; font-size:1.02rem; line-height:1.7; margin-bottom:1.25rem;">
+            After anaerobic microbial breakdown in the specialized chambers, effluent achieves extensive organic pathogen reduction. The resulting mineralized aqueous stream can safely recharge subterranean aquifers through soakaways or nourish non-edible landscaping and lawn irrigation.
+          </p>
+          <ul class="solution-spec-list" style="margin-bottom:0;">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero chemical additives, powered entirely by natural microbiology</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Continuous gravity flow eliminates motorized aeration pump failures</span>
+            </li>
+          </ul>
+        </div>
+        <div class="process-visual-media">
+          <img class="process-feature-img" src="assets/clean-water-effluent.webp" alt="Clean crystal-clear water flowing through natural stones and lush landscape" loading="lazy" width="1000" height="668">
+          <span class="process-media-pill">Environmentally Safe Effluent</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Commercial & Residential System Models Grid -->
   <section class="section section-alt" id="systems">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -519,7 +546,10 @@
 
       <div class="solutions-grid">
         <!-- Model 1: GL-15 -->
-        <div class="solution-card">
+        <div class="solution-card reveal-up delay-1">
+          <div class="card-media-banner">
+            <img class="card-media-img" src="assets/residential-estate.webp" alt="Modern residential townhouse and private villa estate" loading="lazy" width="1200" height="800">
+          </div>
           <div class="solution-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -551,8 +581,11 @@
         </div>
 
         <!-- Model 2: GL-35 -->
-        <div class="solution-card featured">
+        <div class="solution-card featured reveal-up delay-2">
           <div class="card-badge">Model example</div>
+          <div class="card-media-banner">
+            <img class="card-media-img" src="assets/pristine-lawn-irrigation.webp" alt="Lush residential estate grounds with manicured lawn" loading="lazy" width="1000" height="667">
+          </div>
           <div class="solution-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
@@ -585,7 +618,10 @@
         </div>
 
         <!-- Model 3: GL-75 Jumbo -->
-        <div class="solution-card">
+        <div class="solution-card reveal-up delay-3">
+          <div class="card-media-banner">
+            <img class="card-media-img" src="assets/commercial-campus.webp" alt="Commercial corporate park and institutional facility" loading="lazy" width="1200" height="800">
+          </div>
           <div class="solution-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
@@ -619,15 +655,24 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:3rem;">
-        <p style="font-size:1.05rem; color:#475569; margin-bottom:1.5rem;">Need systems for large commercial developments, boarding schools (150 - 1,000+ users), or biogas recovery plants?</p>
-        <a href="solutions.html" class="btn btn-primary-dark">
-          <span>Explore Commercial & Institutional Systems</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
+      <div class="commercial-showcase-banner reveal-up">
+        <div class="commercial-showcase-content">
+          <div class="badge-tag">LARGE INFRASTRUCTURE</div>
+          <h3 style="font-size:1.6rem; margin-bottom:1rem; color:var(--color-navy);">Commercial Campuses &amp; High-Density Developments</h3>
+          <p style="color:#475569; font-size:1.02rem; line-height:1.7; margin-bottom:1.5rem;">
+            From boarding schools and regional hospitals to 100+ unit residential estates, Greenshift engineers scalable multi-chamber anaerobic networks handling up to 150,000+ liters of daily peak hydraulic volume.
+          </p>
+          <a href="solutions.html#commercial" class="btn btn-primary-dark">
+            <span>Explore Commercial &amp; Institutional Systems</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="commercial-showcase-media">
+          <img class="commercial-showcase-img" src="assets/commercial-campus.webp" alt="Modern institutional facility with glass architecture" loading="lazy" width="1200" height="800">
+        </div>
       </div>
     </div>
   </section>
@@ -635,7 +680,7 @@
   <!-- Soil Strata Engineering & Adaptability Guide -->
   <section class="section" id="soil-engineering">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -648,8 +693,27 @@
         <p>Soil, groundwater and available space affect where a system can be installed and how treated water can be managed. A site assessment helps determine suitable options.</p>
       </div>
 
+      <div class="soil-intro-feature reveal-up">
+        <div class="soil-intro-media">
+          <img src="assets/geotechnical-excavation.webp" alt="Geotechnical ground excavation and engineering site survey" loading="lazy" width="1000" height="662">
+        </div>
+        <div class="soil-intro-content">
+          <div class="badge-tag">GEOTECHNICAL SURVEY</div>
+          <h3 style="font-size:1.45rem; margin-bottom:0.85rem; color:var(--color-navy);">Subsurface Site Suitability &amp; Strata Analysis</h3>
+          <p style="color:#475569; font-size:1rem; line-height:1.7; margin-bottom:1.25rem;">
+            Before excavation begins, our civil and environmental engineers evaluate soil percolation rates, seasonal groundwater crests, and lithological strata to engineer stable foundation ballasts, anti-buoyancy keys, and specialized absorption beds.
+          </p>
+          <div style="font-size:0.88rem; font-weight:600; color:#065f46;">
+            Precision civil engineering for non-porous clays, wetlands, and bedrock terrain.
+          </div>
+        </div>
+      </div>
+
       <div class="soil-grid">
-        <div class="soil-card">
+        <div class="soil-card reveal-up delay-1">
+          <div class="soil-card-img">
+            <img src="assets/soil-black-cotton.webp" alt="Black cotton expansive clay soil with surface cracking" loading="lazy" width="800" height="450">
+          </div>
           <div class="soil-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="4" y1="21" x2="4" y2="14"></line>
@@ -674,7 +738,10 @@
           </p>
         </div>
 
-        <div class="soil-card">
+        <div class="soil-card reveal-up delay-2">
+          <div class="soil-card-img">
+            <img src="assets/soil-water-table.webp" alt="High groundwater coastal and wetland terrain" loading="lazy" width="800" height="477">
+          </div>
           <div class="soil-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
@@ -694,7 +761,10 @@
           </p>
         </div>
 
-        <div class="soil-card">
+        <div class="soil-card reveal-up delay-3">
+          <div class="soil-card-img">
+            <img src="assets/soil-rocky-terrain.webp" alt="Hard rock strata and shallow bedrock formation" loading="lazy" width="800" height="533">
+          </div>
           <div class="soil-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -720,7 +790,7 @@
   <!-- System application examples -->
   <section class="section section-alt applications-section" id="case-studies">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal-up">
       <div class="badge-tag">SYSTEM APPLICATIONS</div>
       <h2>Designed around the way a site is used</h2>
       <p>Occupancy, daily flow, available land and ground conditions shape the right treatment and dispersal approach.</p>
@@ -751,7 +821,7 @@
 <!-- Interactive FAQ Section -->
   <section class="section section-alt" id="faq">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
@@ -855,7 +925,7 @@
   <!-- Site Inspection & Quote Request Section -->
   <section class="section" id="quote-section">
     <div class="container">
-      <div class="consultation-card">
+      <div class="consultation-card reveal-scale">
         <div class="consultation-grid">
           <!-- Left Info Box -->
           <div class="consultation-info">
@@ -1167,6 +1237,6 @@
 
   <!-- Scripts -->
   <script src="js/calculator.js"></script>
-  <script src="js/main.js?v=20261108"></script>
+  <script src="js/main.js?v=20261120"></script>
 </body>
 </html>

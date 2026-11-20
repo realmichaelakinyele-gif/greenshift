@@ -109,7 +109,7 @@
   <!-- 4-Stage Biochemical Degradation Pathway -->
   <section class="section" id="anaerobic">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
@@ -139,7 +139,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-2">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -156,7 +156,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-3">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -173,7 +173,7 @@
           </div>
         </div>
 
-        <div class="process-card">
+        <div class="process-card reveal-up delay-4">
           <div class="process-step-indicator">
             <div class="process-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -210,15 +210,38 @@
 
   <section class="section section-alt" id="effluent">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div class="badge-tag">EFFLUENT &amp; SITE CONDITIONS</div>
         <h2>Treatment is one part of the design</h2>
         <p>The quality and destination of treated wastewater depend on the full installation, local requirements and site conditions.</p>
       </div>
-      <div class="effluent-factors">
+      <div class="effluent-factors reveal-up">
         <article><span>01</span><h3>Size for the actual load</h3><p>Occupancy and water use affect daily flow and retention time.</p></article>
         <article><span>02</span><h3>Plan the final discharge</h3><p>Soil, groundwater, setbacks and local approvals guide the effluent route.</p></article>
         <article><span>03</span><h3>Verify where required</h3><p>Use qualified site assessment and laboratory testing when permits or project conditions call for it.</p></article>
+      </div>
+
+      <div class="effluent-showcase-grid reveal-up">
+        <div class="effluent-showcase-media">
+          <img src="assets/scientific-lab-testing.webp" alt="Laboratory technician analyzing water quality and biological metrics" loading="lazy" width="1000" height="1499">
+        </div>
+        <div>
+          <div class="badge-tag">LABORATORY VERIFICATION</div>
+          <h3 style="font-size:1.45rem; margin-bottom:0.85rem; color:var(--color-navy);">Empirical Water Quality Metrics</h3>
+          <p style="color:#475569; font-size:1rem; line-height:1.7; margin-bottom:1.25rem;">
+            Treated effluent from properly engineered Greenshift anaerobic digesters demonstrates consistent reductions in Biological Oxygen Demand (BOD5), Total Suspended Solids (TSS), and pathogens, meeting regulatory environmental discharge criteria.
+          </p>
+          <ul class="solution-spec-list" style="margin-bottom:0;">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Up to 90% reduction in settleable organic solids and odor</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Periodic laboratory sampling protocols available for municipal compliance</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -226,7 +249,7 @@
   <section class="section" id="structural">
     <div class="container">
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:3.5rem; align-items:center;">
-        <div>
+        <div class="reveal-left">
           <div class="badge-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -259,7 +282,10 @@
           </ul>
         </div>
 
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px; padding:2rem; box-shadow:var(--shadow-lg);">
+        <div class="reveal-right" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px; padding:2rem; box-shadow:var(--shadow-lg);">
+          <div class="tech-media-card">
+            <img src="assets/precast-structural-concrete.webp" alt="High-strength precast structural reinforced concrete engineering" loading="lazy" width="1000" height="667">
+          </div>
           <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#059669; letter-spacing:0.06em; margin-bottom:0.5rem;">SUBSURFACE HYDROLOGY</div>
           <h3 style="font-size:1.2rem; margin-bottom:1rem;">Example subsurface dispersal layout</h3>
           <svg viewBox="0 0 400 240" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
@@ -359,6 +385,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261108"></script>
+  <script src="js/main.js?v=20261120"></script>
 </body>
 </html>

@@ -2269,3 +2269,358 @@ input:focus, select:focus, textarea:focus { border-color: #8da996; box-shadow: 0
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* ===================================================================
+   SCROLL EFFECTS, MEDIA BANNERS & MODERN ANIMATIONS
+   =================================================================== */
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #0d4734, #059669, #34d399);
+  z-index: 10001;
+  transition: width 60ms ease-out;
+  pointer-events: none;
+}
+
+/* Header scrolled state */
+.site-header.header-scrolled {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(7, 38, 27, 0.08);
+  border-bottom-color: rgba(226, 232, 240, 0.8);
+}
+
+/* Scroll Reveal Keyframes & Base Classes */
+.reveal, .reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 750ms cubic-bezier(0.16, 1, 0.3, 1), transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed,
+.reveal-up.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+
+/* Subtle floating ambient effect for hero tank */
+@keyframes float-subtle {
+  0% { transform: translateY(0px) scale(1.02); }
+  50% { transform: translateY(-8px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1.02); }
+}
+.hero-tank-image {
+  animation: float-subtle 6.5s ease-in-out infinite;
+}
+.hero-tank-image:hover {
+  animation-play-state: paused;
+  transform: scale(1.04);
+}
+
+/* Card Media Banners */
+.card-media-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: #eef2ed;
+}
+.card-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.solution-card:hover .card-media-img {
+  transform: scale(1.06);
+}
+
+/* Soil Card Media */
+.soil-card-img {
+  width: 100%;
+  height: 155px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #eef2ed;
+}
+.soil-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.soil-card:hover .soil-card-img img {
+  transform: scale(1.06);
+}
+
+/* Commercial Showcase Banner */
+.commercial-showcase-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(7, 38, 27, 0.06);
+  margin-top: 3.5rem;
+  align-items: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.commercial-showcase-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(7, 38, 27, 0.1);
+}
+.commercial-showcase-content {
+  padding: clamp(2rem, 3.5vw, 3.25rem);
+}
+.commercial-showcase-media {
+  position: relative;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+.commercial-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.commercial-showcase-banner:hover .commercial-showcase-img {
+  transform: scale(1.05);
+}
+
+/* Process Feature Banner */
+.process-visual-feature {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 8px 30px rgba(7, 38, 27, 0.05);
+  margin-top: 3rem;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.process-visual-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(7, 38, 27, 0.09);
+}
+.process-visual-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 280px;
+  background: #eef2ed;
+}
+.process-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.process-visual-feature:hover .process-feature-img {
+  transform: scale(1.05);
+}
+.process-media-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(7, 38, 27, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #a7f3d0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(167, 243, 208, 0.25);
+}
+
+/* Geotechnical Intro Feature */
+.soil-intro-feature {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(7, 38, 27, 0.04);
+}
+.soil-intro-media {
+  height: 100%;
+  min-height: 270px;
+  overflow: hidden;
+  background: #eef2ed;
+}
+.soil-intro-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.soil-intro-feature:hover .soil-intro-media img {
+  transform: scale(1.05);
+}
+.soil-intro-content {
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+/* Comparison Card Media */
+.comparison-card-media {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: #f1f5f2;
+}
+.comparison-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.comparison-overview-card:hover .comparison-card-media img {
+  transform: scale(1.06);
+}
+
+/* Consultation Card with Architectural Background */
+.consultation-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(7, 38, 27, 0.94), rgba(13, 71, 52, 0.9)), url('../assets/cta-architecture-bg.webp') center/cover no-repeat !important;
+  color: var(--color-white);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(7, 38, 27, 0.22);
+}
+
+/* Responsive Rules for New Layouts */
+@media (max-width: 900px) {
+  .commercial-showcase-banner,
+  .process-visual-feature,
+  .soil-intro-feature {
+    grid-template-columns: 1fr;
+  }
+  .commercial-showcase-media,
+  .process-visual-media,
+  .soil-intro-media {
+    height: 230px;
+    min-height: 230px;
+  }
+}
+
+
+/* Consultation Info Architectural Backdrop */
+.consultation-info {
+  background: linear-gradient(145deg, rgba(7, 38, 27, 0.94), rgba(13, 71, 52, 0.9)), url('../assets/cta-architecture-bg.webp') center/cover no-repeat !important;
+}
+
+/* Technology & Solutions Media Banners */
+.tech-media-card {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  height: 200px;
+  background: #eef2ed;
+  box-shadow: 0 4px 16px rgba(7, 38, 27, 0.06);
+}
+.tech-media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tech-media-card:hover img {
+  transform: scale(1.05);
+}
+
+.effluent-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 8px 30px rgba(7, 38, 27, 0.05);
+  margin-top: 2.5rem;
+}
+.effluent-showcase-media {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 260px;
+  background: #eef2ed;
+}
+.effluent-showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.effluent-showcase-grid:hover .effluent-showcase-media img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .effluent-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
