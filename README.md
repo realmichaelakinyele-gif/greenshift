@@ -2,13 +2,17 @@
 
 An executive industrial and environmental engineering website engineered for **Greenshift Bio Digester Limited**, specializing in decentralized anaerobic biological sewage treatment systems, septic tank conversion engineering, and waste-to-energy biogas recovery.
 
+🌐 **Live Website**: [https://realmichaelakinyele-gif.github.io/greenshift/](https://realmichaelakinyele-gif.github.io/greenshift/)
+
 ---
 
 ## 1. Architectural Principles
 
 - **Strictly Professional Aesthetic**: Industrial environmental engineering visual identity utilizing a deep forest jade (`#07261B`), vibrant emerald (`#059669`), and slate charcoal (`#0F172A`) palette with Google Fonts (*Plus Jakarta Sans* for headers and *Inter* for body typography).
 - **Zero Emojis Enforced**: Strictly 100% vector SVG icons with scalable viewBox coordinates, stroke geometry, and semantic accessibility. Zero Unicode emojis are used across any file or component.
-- **Zero Heavy Framework Overheads**: Developed with lightweight, modern HTML5, CSS3 Custom Properties (variables), and modular ES6 JavaScript. Instant load times, zero build-step requirement, and 100% offline-compatible.
+- **Lightweight High-Efficiency WebP Media**: 100% of photographic assets, illustrations, brand marks, and favicons are converted to optimized WebP format for fast loads and minimal data consumption.
+- **Scroll Effects & Ambient Animations**: Features a real-time gradient scroll progress indicator, frosted glass sticky header, staggered `IntersectionObserver` scroll reveals, animated stat counters, and subtle floating hero visual.
+- **Zero Heavy Framework Overheads**: Developed with clean semantic HTML5, CSS3 Custom Properties, and modular ES6 JavaScript. Instant load times, zero build-step requirement, and 100% offline-compatible.
 - **Geotechnical & Standards Compliance**: Aligned with British Standards (BS 6297 wastewater discharge, BS 8007 water-retaining concrete structures) and environmental authority (NEMA/EPA) discharge criteria.
 
 ---
@@ -18,17 +22,36 @@ An executive industrial and environmental engineering website engineered for **G
 ```
 Greenshift/
 ├── assets/
-│   ├── favicon.svg           # Scalable vector brand crest favicon
+│   ├── greenshift-logo.svg           # Official brand emblem (vector SVG)
+│   ├── greenshift-logo.webp          # Official brand emblem (high-performance WebP)
+│   ├── favicon.webp                  # Multi-resolution WebP favicon
+│   ├── favicon.png                   # PNG fallback favicon
+│   ├── greenshift-three-chamber-tank.webp # Floating hero visual cutaway
+│   ├── residential-estate.webp       # GL-15 / residential community photography
+│   ├── commercial-campus.webp        # GL-75 / institutional facility showcase
+│   ├── geotechnical-excavation.webp  # Soil survey and ground excavation
+│   ├── soil-black-cotton.webp        # Expansive clay strata photography
+│   ├── soil-water-table.webp         # High water table & wetland photography
+│   ├── soil-rocky-terrain.webp       # Rocky strata & shallow bedrock photography
+│   ├── clean-water-effluent.webp     # Treated effluent & eco-dispersal
+│   ├── precast-structural-concrete.webp # Reinforced precast concrete engineering
+│   ├── biogas-clean-energy.webp      # Renewable biogas clean methane flame
+│   ├── pristine-lawn-irrigation.webp # Manicured estate grounds & lawn
+│   ├── cta-architecture-bg.webp      # Consultation card architectural backdrop
+│   ├── scientific-lab-testing.webp   # Laboratory water metrics testing
+│   ├── house.webp                    # Residential application card photography
+│   ├── office.webp                   # Commercial application card photography
+│   ├── hotel.webp                    # Hospitality application card photography
 │   └── reference/
-│       └── biodigester-process.jpg # Illustrative chamber diagram, credited below
+│       └── biodigester-process.webp  # Reference 3-chamber process diagram
 ├── css/
-│   └── style.css             # Unified design system, CSS variables, typography & responsive rules
+│   └── style.css             # Unified design system, CSS variables, scroll effects & responsive rules
 ├── js/
 │   ├── calculator.js         # Hydraulic sizing engine, soil coefficients & ROI mathematical model
-│   └── main.js               # Global navigation, mobile drawer, accordions, modals & toast engine
-├── index.html                # Flagship portal: Cutaway schematic, comparison table, sizing tool, case studies
+│   └── main.js               # Scroll progress, intersection observer, counters, navigation & modals
+├── index.html                # Flagship portal: Cutaway schematic, comparison, sizing tool, case studies
 ├── solutions.html            # Residential, Commercial, Institutional, Biogas & Specification Matrix
-├── technology.html           # 4-stage anaerobic biochemistry, BOD/COD water metrics & French drain hydrology
+├── technology.html           # 4-stage anaerobic cascade, lab metrics & French drain hydrology
 ├── calculator.html           # Dedicated full-scale sizing & 10-year financial feasibility estimator
 ├── contact.html              # Technical dispatch, emergency hotline, service branches & site booking
 └── README.md                 # Complete system documentation
